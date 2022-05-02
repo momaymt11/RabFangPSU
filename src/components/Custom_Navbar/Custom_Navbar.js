@@ -15,6 +15,7 @@ import {
   Input,
   Label,
   Row,
+  FormGroup,
 } from "reactstrap";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -155,42 +156,66 @@ function Custom_Navbar() {
                 </Button>
               </Form>
             ) : (
-              <Form>
+              <Form
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
                 <h2>Register</h2>
-                <Row>
+                <FormGroup>
                   <Label> username :</Label>
                   <Input
                     type="text"
-                    style={{ margin: 10, width: "30vh" }}
+                    style={{ width: "30vh" }}
                     onChange={(event) => {
                       setusername(event.target.value);
                     }}
                   ></Input>
-                </Row>
-                <Row>
+                </FormGroup>
+
+                <FormGroup>
                   <Label> email :</Label>
-                  <Input
-                    type="email"
-                    style={{ margin: 10, width: "30vh" }}
-                  ></Input>
-                </Row>
-                <Row>
+                  <Input type="email" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
                   <Label> password :</Label>
                   <Input
                     type="password"
-                    style={{ margin: 10, width: "30vh" }}
+                    style={{ width: "30vh" }}
                     onChange={(event) => {
                       setpassword(event.target.value);
                     }}
                   ></Input>
-                </Row>
-                <Row>
+                </FormGroup>
+                <FormGroup>
                   <Label> confirm password :</Label>
-                  <Input
-                    type="password"
-                    style={{ margin: 10, width: "30vh" }}
-                  ></Input>
-                </Row>
+                  <Input type="password" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label> faculty :</Label>
+                  <Input type="text" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label> major :</Label>
+                  <Input type="text" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label> year :</Label>
+                  <Input type="nunber" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label> phone :</Label>
+                  <Input type="number" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label> birthday :</Label>
+                  <Input type="password" style={{ width: "30vh" }}></Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label> address :</Label>
+                  <Input type="password" style={{ width: "30vh" }}></Input>
+                </FormGroup>
                 <Button
                   style={{ margin: 10 }}
                   onClick={() => {
